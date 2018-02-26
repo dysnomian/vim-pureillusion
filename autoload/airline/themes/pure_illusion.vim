@@ -66,9 +66,9 @@ let g:airline#themes#pure_illusion#palette.insert_paste = {
       \ }
 
 
-let g:airline#themes#pure_illusion#palette.replace = copy(g:airline#themes#challenger_deep#palette.insert)
+let g:airline#themes#pure_illusion#palette.replace = copy(g:airline#themes#pure_illusion#palette.insert)
 let g:airline#themes#pure_illusion#palette.replace.airline_a = [ s:I2[0]   , s:yellow.gui , s:I2[2] , s:yellow.cterm16     , ''     ]
-let g:airline#themes#pure_illusion#palette.replace_modified = g:airline#themes#challenger_deep#palette.insert_modified
+let g:airline#themes#pure_illusion#palette.replace_modified = g:airline#themes#pure_illusion#palette.insert_modified
 
 
 let s:V1 = [ s:bg_subtle.gui , s:yellow.gui , s:bg_subtle.cterm16 , s:yellow.cterm16]

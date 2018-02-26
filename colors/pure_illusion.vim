@@ -20,16 +20,16 @@ endif
 
 " not all terminals support italics properly.  If yours does, opt-in.
 if ! exists("g:pure_illusion_terminal_italics")
-  let g:pure_illusion_terminal_italics = 0
+  let g:pure_illusion_terminal_italics = 1
 endif
 
 " Colors
 let s:abyssal_black   = { "gui": "#000000", "cterm": "0", "cterm16" : "0" }
 let s:soft_gray       = { "gui": "#3f2a38", "cterm": "0", "cterm16" : "0" }
 let s:dark_gray       = { "gui": "#424242", "cterm": "8", "cterm16" : "8" }       " todo
-let s:medium_gray     = { "gui": "#888", "cterm": "243", "cterm16" : "243" }       " todo
-let s:pure_light_gray           = { "gui": "#cccccc", "cterm": "15", "cterm16" : "15" }
-let s:pure_white    = { "gui": "#FFFFFF", "cterm": "231", "cterm16" : "231" }
+let s:medium_gray     = { "gui": "#888", "cterm": "243", "cterm16" : "" }       " todo
+let s:pure_light_gray = { "gui": "#cccccc", "cterm": "15", "cterm16" : "15" }
+let s:pure_white      = { "gui": "#FFFFFF", "cterm": "231", "cterm16" : "1" }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240", "cterm16" : "240" }       " todo
 
 " lighter shadows and darker grays
@@ -77,12 +77,13 @@ let s:head_c         = s:dark_cyan
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
   " Not all terminals support italics properly. If yours does, opt-in.
-  if g:challenger_deep_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
+  if g:pure_illusion_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
     unlet a:style.cterm
   endif
-  if g:challenger_deep_termcolors == 16
-    let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm16 : "NONE")
-    let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm16 : "NONE")
+
+  if g:pure_illusion_termcolors == 16
+    let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm16 : "0")
+    let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm16 : "1")
   else
     let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm : "NONE")
     let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm : "NONE")
