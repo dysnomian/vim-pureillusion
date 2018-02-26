@@ -48,7 +48,7 @@ let s:cocona_pink_deeper = { "gui": "#3981f1", "cterm": "203", "cterm16": "9"}
 let s:yayaka_green = { "gui": "#a6e22e", "cterm": "120", "cterm16": "2"}
 let s:yayaka_green_deeper = { "gui": "#74bb4e", "cterm": "119", "cterm16": "10"}
 
-let s:flipflap_flipflap_yellow = { "gui": "#fcfdaf", "cterm": "228", "cterm16": "3"}       " todo
+let s:flipflap_yellow = { "gui": "#fcfdaf", "cterm": "228", "cterm16": "3"}       " todo
 let s:flipflap_gold = { "gui": "#e69263", "cterm": "215", "cterm16": "11"}       " todo
 
 let s:papika_blue = { "gui": "#98d3f9", "cterm": "159", "cterm16": "4"}
