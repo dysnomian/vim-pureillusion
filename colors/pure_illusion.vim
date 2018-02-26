@@ -68,7 +68,8 @@ let s:bg_subtle       = s:soft_gray
 let s:bg_dark         = s:abyssal_black
 let s:norm            = s:pure_white
 let s:norm_subtle     = s:pure_light_gray
-let s:visual          = s:bg
+let s:visual          = s:flipflap_cyan
+let s:visual_fg       = s:abyssal_black
 
 let s:head_a         = s:papika_blue_deeper
 let s:head_b         = s:papika_blue
@@ -104,7 +105,7 @@ endfunction
 
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
 call s:h("Cursor",        {"bg": s:bg_dark, "fg": s:norm })
-call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
+call s:h("Comment",       {"fg": s:dark_gray, "gui": "italic", "cterm": "italic"})
 
 call s:h("Constant",      {"fg": s:flipflap_yellow})
 hi! link String           Constant
@@ -165,7 +166,7 @@ call s:h("IncSearch",     {"bg": s:cocona_pink, "fg": s:clouds})       " todo
 call s:h("Search",        {"bg": s:bg_dark})       " todo
 call s:h("MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})       " todo
 hi! link ModeMsg MoreMsg
-call s:h("LineNr",        {"fg": s:dark_asphalt, "bg": s:bg_subtle})       " todo
+call s:h("LineNr",        {"fg": s:abyssal_black, "bg": s:bg_subtle})       " todo
 call s:h("CursorLineNr",  {"bg": s:papika_blue, "fg": s:bg_subtle})       " todo
 call s:h("Question",      {"fg": s:cocona_pink})       " todo
 call s:h("StatusLine",    {"bg": s:bg_dark})       " todo
@@ -182,7 +183,7 @@ call s:h("DiffAdd",       {"fg": s:yayaka_green})       " todo
 call s:h("DiffDelete",    {"fg": s:cocona_pink})       " todo
 call s:h("DiffChange",    {"fg": s:flipflap_gold})       " todo
 call s:h("DiffText",      {"fg": s:papika_blue_deeper})       " todo
-call s:h("SignColumn",    {"fg": s:yayaka_green})       " todo
+call s:h("SignColumn",    {"fg": s:pure_white})       " todo
 
 if has("gui_running")
   call s:h("SpellBad",    {"gui": "underline", "sp": s:cocona_pink_deeper})       " todo
@@ -199,9 +200,9 @@ call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_dark})       " todo
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:bg_subtle})       " todo
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})       " todo
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})       " todo
-call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_dark})       " todo
-call s:h("TabLineSel",    {"fg": s:norm, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})       " todo
-call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_dark})       " todo
+call s:h("TabLine",       {"fg": s:papika_blue,   "bg": s:pure_white})       " todo
+call s:h("TabLineSel",    {"fg": s:pure_white, "bg": s:abyssal_black, "gui": "bold", "cterm": "bold"})       " todo
+call s:h("TabLineFill",   {"fg": s:soft_gray, "bg": s:pure_white})       " todo
 call s:h("CursorColumn",  {"bg": s:bg_subtle})       " todo
 call s:h("CursorLine",    {"bg": s:bg_subtle})       " todo
 call s:h("ColorColumn",   {"bg": s:bg_subtle})       " todo
