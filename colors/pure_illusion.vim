@@ -25,7 +25,7 @@ endif
 
 " Colors
 let s:abyssal_black   = { "gui": "#000000", "cterm": "0", "cterm16" : "0" }
-let s:soft_gray       = { "gui": "#3f2a38", "cterm": "0", "cterm16" : "0" }
+let s:soft_gray       = { "gui": "#2e2b2b", "cterm": "0", "cterm16" : "0" }
 let s:dark_gray       = { "gui": "#424242", "cterm": "8", "cterm16" : "8" }       " todo
 let s:medium_gray     = { "gui": "#888", "cterm": "243", "cterm16" : "" }       " todo
 let s:pure_light_gray = { "gui": "#cccccc", "cterm": "15", "cterm16" : "15" }
@@ -48,8 +48,8 @@ let s:cocona_pink_deeper = { "gui": "#3981f1", "cterm": "203", "cterm16": "9"}
 let s:yayaka_green = { "gui": "#a6e22e", "cterm": "120", "cterm16": "2"}
 let s:yayaka_green_deeper = { "gui": "#74bb4e", "cterm": "119", "cterm16": "10"}
 
-let s:yellow = { "gui": "#fcfdaf", "cterm": "228", "cterm16": "3"}       " todo
-let s:dark_yellow = { "gui": "#e69263", "cterm": "215", "cterm16": "11"}       " todo
+let s:flipflap_flipflap_yellow = { "gui": "#fcfdaf", "cterm": "228", "cterm16": "3"}       " todo
+let s:flipflap_gold = { "gui": "#e69263", "cterm": "215", "cterm16": "11"}       " todo
 
 let s:papika_blue = { "gui": "#98d3f9", "cterm": "159", "cterm16": "4"}
 let s:papika_blue_deeper = { "gui": "#3981f1", "cterm": "75", "cterm16": "12"}
@@ -106,11 +106,11 @@ call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
 call s:h("Cursor",        {"bg": s:bg_dark, "fg": s:norm })
 call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
-call s:h("Constant",      {"fg": s:yellow})
+call s:h("Constant",      {"fg": s:flipflap_yellow})
 hi! link String           Constant
 hi! link Character        Constant
 
-call s:h("Number",       {"fg": s:dark_yellow})
+call s:h("Number",       {"fg": s:flipflap_gold})
 hi! link Boolean          Constant
 hi! link Float            Constant
 
@@ -155,9 +155,9 @@ call s:h("Todo",          {"fg": s:pure_white, "bg": s:papika_blue, "gui": "bold
 " ordered according to `:help hitest.vim`
 
 call s:h("SpecialKey",    {"fg": s:papika_blue})       " todo
-call s:h("Boolean",    {"fg": s:dark_yellow})       " todo
-call s:h("Number",    {"fg": s:dark_yellow})       " todo
-call s:h("Float",    {"fg": s:dark_yellow})       " todo
+call s:h("Boolean",    {"fg": s:flipflap_gold})       " todo
+call s:h("Number",    {"fg": s:flipflap_gold})       " todo
+call s:h("Float",    {"fg": s:flipflap_gold})       " todo
 call s:h("NonText",       {"fg": s:bg_dark})       " todo
 call s:h("Directory",     {"fg": s:purple})       " todo
 call s:h("ErrorMsg",      {"fg": s:cocona_pink_deeper})       " todo
@@ -174,13 +174,13 @@ call s:h("StatusLineNC",  {"bg": s:bg_dark, "fg": s:medium_gray})       " todo
 call s:h("VertSplit",     {"fg": s:bg_subtle})       " todo
 call s:h("Title",         {"fg": s:papika_blue_deeper})       " todo
 call s:h("Visual",        {"bg": s:visual})       " todo
-call s:h("WarningMsg",    {"fg": s:yellow})       " todo
+call s:h("WarningMsg",    {"fg": s:flipflap_yellow})       " todo
 call s:h("WildMenu",      {"fg": s:bg_subtle, "bg": s:cyan})       " todo
 call s:h("Folded",        {"bg": s:purple, "fg": s:bg_subtle})       " todo
-call s:h("FoldColumn",    {"fg": s:yellow})       " todo
+call s:h("FoldColumn",    {"fg": s:flipflap_yellow})       " todo
 call s:h("DiffAdd",       {"fg": s:yayaka_green})       " todo
 call s:h("DiffDelete",    {"fg": s:cocona_pink})       " todo
-call s:h("DiffChange",    {"fg": s:dark_yellow})       " todo
+call s:h("DiffChange",    {"fg": s:flipflap_gold})       " todo
 call s:h("DiffText",      {"fg": s:papika_blue_deeper})       " todo
 call s:h("SignColumn",    {"fg": s:yayaka_green})       " todo
 
@@ -314,7 +314,7 @@ hi link SignifySignDelete           LineNr
 hi link SignifySignChange           LineNr
 call s:h("GitGutterAdd",{"fg": s:yayaka_green})
 call s:h("GitGutterDelete",{"fg": s:cocona_pink})
-call s:h("GitGutterChange",{"fg": s:yellow})
+call s:h("GitGutterChange",{"fg": s:flipflap_yellow})
 call s:h("GitGutterChangeDelete",{"fg": s:cocona_pink})
 
 
@@ -322,7 +322,7 @@ call s:h("GitGutterChangeDelete",{"fg": s:cocona_pink})
 let g:terminal_color_0 = s:bg_dark.gui
 let g:terminal_color_1 = s:cocona_pink.gui
 let g:terminal_color_2 = s:yayaka_green.gui
-let g:terminal_color_3 = s:yellow.gui
+let g:terminal_color_3 = s:flipflap_yellow.gui
 let g:terminal_color_4 = s:papika_blue.gui
 let g:terminal_color_5 = s:purple.gui
 let g:terminal_color_6 = s:cyan.gui
@@ -330,7 +330,7 @@ let g:terminal_color_7 = s:clouds.gui
 let g:terminal_color_8 = s:bg_subtle.gui
 let g:terminal_color_9 = s:cocona_pink_deeper.gui
 let g:terminal_color_10 = s:yayaka_green_deeper.gui
-let g:terminal_color_11 = s:dark_yellow.gui
+let g:terminal_color_11 = s:flipflap_gold.gui
 let g:terminal_color_12 = s:papika_blue_deeper.gui
 let g:terminal_color_13 = s:dark_purple.gui
 let g:terminal_color_14 = s:dark_cyan.gui
