@@ -24,12 +24,12 @@ if ! exists("g:pure_illusion_terminal_italics")
 endif
 
 " Colors
-let s:abyssal_black           = { "gui": "#000000", "cterm": "0", "cterm16" : "0" }
-let s:soft_gray           = { "gui": "#3f2a38", "cterm": "0", "cterm16" : "0" }
-let s:dark_gray     = { "gui": "#424242", "cterm": "8", "cterm16" : "8" }       " todo
+let s:abyssal_black   = { "gui": "#000000", "cterm": "0", "cterm16" : "0" }
+let s:soft_gray       = { "gui": "#3f2a38", "cterm": "0", "cterm16" : "0" }
+let s:dark_gray       = { "gui": "#424242", "cterm": "8", "cterm16" : "8" }       " todo
 let s:medium_gray     = { "gui": "#888", "cterm": "243", "cterm16" : "243" }       " todo
-let s:pure_light_gray           = { "gui": "#cccccc", "cterm": "15", "cterm16" : "15" }       " todo
-let s:pure_white    = { "gui": "#FFFFFF", "cterm": "231", "cterm16" : "231" }       " todo
+let s:pure_light_gray           = { "gui": "#cccccc", "cterm": "15", "cterm16" : "15" }
+let s:pure_white    = { "gui": "#FFFFFF", "cterm": "231", "cterm16" : "231" }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240", "cterm16" : "240" }       " todo
 
 " lighter shadows and darker grays
@@ -42,17 +42,17 @@ let s:asphalt = { "gui": "#1e1c31", "cterm": "233", "cterm16": "NONE"}       " t
 let s:asphalt_subtle= { "gui": "#100E23", "cterm": "232", "cterm16": "8"}       " todo
 let s:dark_asphalt = { "gui": "#565575", "cterm": "236", "cterm16": "0"}       " todo
 
-let s:cocona_pink = { "gui": "#fa9cb6", "cterm": "204", "cterm16": "1"}       " todo
-let s:cocona_pink_deeper = { "gui": "#3981f1", "cterm": "203", "cterm16": "9"}       " todo
+let s:cocona_pink = { "gui": "#fa9cb6", "cterm": "204", "cterm16": "1"}
+let s:cocona_pink_deeper = { "gui": "#3981f1", "cterm": "203", "cterm16": "9"}
 
-let s:yayaka_green = { "gui": "#a6e22e", "cterm": "120", "cterm16": "2"}       " todo
-let s:yayaka_green_deeper = { "gui": "#74bb4e", "cterm": "119", "cterm16": "10"}       " todo
+let s:yayaka_green = { "gui": "#a6e22e", "cterm": "120", "cterm16": "2"}
+let s:yayaka_green_deeper = { "gui": "#74bb4e", "cterm": "119", "cterm16": "10"}
 
 let s:yellow = { "gui": "#fcfdaf", "cterm": "228", "cterm16": "3"}       " todo
 let s:dark_yellow = { "gui": "#e69263", "cterm": "215", "cterm16": "11"}       " todo
 
-let s:papika_blue = { "gui": "#98d3f9", "cterm": "159", "cterm16": "4"}       " todo
-let s:papika_blue_deeper = { "gui": "#3981f1", "cterm": "75", "cterm16": "12"}       " todo
+let s:papika_blue = { "gui": "#98d3f9", "cterm": "159", "cterm16": "4"}
+let s:papika_blue_deeper = { "gui": "#3981f1", "cterm": "75", "cterm16": "12"}
 
 let s:purple = { "gui": "#cb88ec", "cterm": "141", "cterm16": "5"}       " todo
 let s:dark_purple = { "gui": "#906cff", "cterm": "135", "cterm16": "13"}       " todo
@@ -63,52 +63,53 @@ let s:dark_cyan = { "gui": "#63f2f1", "cterm": "121", "cterm16": "14"}       " t
 let s:clouds = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}       " todo
 let s:dark_clouds = { "gui": "#a6b3cc", "cterm": "252", "cterm16": "15"}       " todo
 
-let s:bg              = s:soft_gray       " todo
-let s:bg_subtle       = s:asphalt_subtle       " todo
-let s:bg_dark         = s:abyssal_black       " todo
-let s:norm            = s:pure_white       " todo
-let s:norm_subtle     = s:pure_light_gray       " todo
-let s:visual          = s:bg_dark       " todo
+let s:bg              = s:soft_gray
+let s:bg_subtle       = s:soft_gray
+let s:bg_dark         = s:abyssal_black
+let s:norm            = s:pure_white
+let s:norm_subtle     = s:pure_light_gray
+let s:visual          = s:bg
 
-let s:head_a         = s:papika_blue_deeper       " todo
-let s:head_b         = s:papika_blue       " todo
-let s:head_c         = s:dark_cyan       " todo
+let s:head_a         = s:papika_blue_deeper
+let s:head_b         = s:papika_blue
+let s:head_c         = s:dark_cyan
 
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
   " Not all terminals support italics properly. If yours does, opt-in.
-  if g:pure_illusion_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
+  if g:challenger_deep_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
     unlet a:style.cterm
   endif
-  if g:pure_illusion_termcolors == 16
-    let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm16 : "NONE")       " todo
-    let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm16 : "NONE")       " todo
+  if g:challenger_deep_termcolors == 16
+    let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm16 : "NONE")
+    let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm16 : "NONE")
   else
-    let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm : "NONE")       " todo
-    let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm : "NONE")       " todo
+    let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm : "NONE")
+    let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm : "NONE")
   end
   execute "highlight" a:group
-    \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")       " todo
-    \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")       " todo
-    \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")       " todo
-    \ "gui="     (has_key(a:style, "gui")   ? a:style.gui      : "NONE")       " todo
-    \ "ctermfg=" . l:ctermfg       " todo
-    \ "ctermbg=" . l:ctermbg       " todo
-    \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")       " todo
+    \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
+    \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
+    \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")
+    \ "gui="     (has_key(a:style, "gui")   ? a:style.gui      : "NONE")
+    \ "ctermfg=" . l:ctermfg
+    \ "ctermbg=" . l:ctermbg
+    \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
+
 
 " common groups ================================================================
 " (see `:h w18`)
 
-call s:h("Normal",        {"bg": s:bg, "fg": s:norm})       " todo
-call s:h("Cursor",        {"bg": s:bg_dark, "fg": s:norm })       " todo
-call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})       " todo
+call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
+call s:h("Cursor",        {"bg": s:bg_dark, "fg": s:norm })
+call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
-call s:h("Constant",      {"fg": s:yellow})       " todo
+call s:h("Constant",      {"fg": s:yellow})
 hi! link String           Constant
 hi! link Character        Constant
 
-call s:h("Number",       {"fg": s:dark_yellow})       " todo
+call s:h("Number",       {"fg": s:dark_yellow})
 hi! link Boolean          Constant
 hi! link Float            Constant
 
