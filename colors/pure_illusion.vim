@@ -67,7 +67,7 @@ let s:bg              = s:soft_gray       " todo
 let s:bg_subtle       = s:asphalt_subtle       " todo
 let s:bg_dark         = s:abyssal_black       " todo
 let s:norm            = s:pure_white       " todo
-let s:norm_subtle     = s:pure_soft_gray       " todo
+let s:norm_subtle     = s:pure_light_gray       " todo
 let s:visual          = s:bg_dark       " todo
 
 let s:head_a         = s:papika_blue_deeper       " todo
@@ -146,8 +146,8 @@ hi! link Debug            Special
 
 call s:h("Underlined",    {"fg": s:norm                      , "gui": "underline", "cterm": "underline"})       " todo
 call s:h("Ignore",        {"fg": s:bg                                                                  })       " todo
-call s:h("Error",         {"fg": s:actual_white, "bg": s:cocona_pink_deeper , "gui": "bold"     , "cterm": "bold"     })       " todo
-call s:h("Todo",          {"fg": s:actual_white, "bg": s:papika_blue, "gui": "bold"     , "cterm": "bold"     })       " todo
+call s:h("Error",         {"fg": s:pure_white, "bg": s:cocona_pink_deeper , "gui": "bold"     , "cterm": "bold"     })       " todo
+call s:h("Todo",          {"fg": s:pure_white, "bg": s:papika_blue, "gui": "bold"     , "cterm": "bold"     })       " todo
 
 " ui chrome ====================================================================
 " ordered according to `:help hitest.vim`
