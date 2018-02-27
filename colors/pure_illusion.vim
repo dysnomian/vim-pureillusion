@@ -54,11 +54,11 @@ let s:flipflap_gold = { "gui": "#e69263", "cterm": "215", "cterm16": "11"}      
 let s:papika_blue = { "gui": "#98d3f9", "cterm": "159", "cterm16": "4"}
 let s:papika_blue_deeper = { "gui": "#3981f1", "cterm": "75", "cterm16": "12"}
 
-let s:purple = { "gui": "#cb88ec", "cterm": "141", "cterm16": "5"}       " todo
-let s:dark_purple = { "gui": "#906cff", "cterm": "135", "cterm16": "13"}       " todo
+let s:yayaka_purple = { "gui": "#cb88ec", "cterm": "141", "cterm16": "5"}       " todo
+let s:dark_purple = { "gui": "#cfb0ff", "cterm": "135", "cterm16": "13"}       " todo
 
-let s:cyan = { "gui": "#6af2f1", "cterm": "122", "cterm16": "6"}       " todo
-let s:dark_cyan = { "gui": "#63f2f1", "cterm": "121", "cterm16": "14"}       " todo
+let s:flipflap_cyan = { "gui": "#6af2f1", "cterm": "122", "cterm16": "6"}       " todo
+let s:pure_seafoam = { "gui": "#7ce8a4", "cterm": "121", "cterm16": "14"}       " todo
 
 let s:clouds = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}       " todo
 let s:dark_clouds = { "gui": "#a6b3cc", "cterm": "252", "cterm16": "15"}       " todo
@@ -73,7 +73,7 @@ let s:visual_fg       = s:abyssal_black
 
 let s:head_a         = s:papika_blue_deeper
 let s:head_b         = s:papika_blue
-let s:head_c         = s:dark_cyan
+let s:head_c         = s:pure_seafoam
 
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
@@ -115,14 +115,14 @@ call s:h("Number",       {"fg": s:flipflap_gold})
 hi! link Boolean          Constant
 hi! link Float            Constant
 
-call s:h("Identifier",    {"fg": s:purple})       " todo
+call s:h("Identifier",    {"fg": s:yayaka_purple})       " todo
 hi! link Function         Identifier
 
 call s:h("Label",        {"fg": s:papika_blue_deeper})       " todo
 hi! link Conditonal       Statement
 hi! link Exception        Statement
 
-call s:h("Operator",     {"fg": s:dark_cyan})       " todo
+call s:h("Operator",     {"fg": s:pure_seafoam})       " todo
 hi! link Repeat           Operator
 
 call s:h("PreProc",       {"fg": s:yayaka_green})       " todo
@@ -140,7 +140,7 @@ hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
 
-call s:h("Special",       {"fg": s:cyan})       " todo
+call s:h("Special",       {"fg": s:flipflap_cyan})       " todo
 hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
@@ -160,7 +160,7 @@ call s:h("Boolean",    {"fg": s:flipflap_gold})       " todo
 call s:h("Number",    {"fg": s:flipflap_gold})       " todo
 call s:h("Float",    {"fg": s:flipflap_gold})       " todo
 call s:h("NonText",       {"fg": s:bg_dark})       " todo
-call s:h("Directory",     {"fg": s:purple})       " todo
+call s:h("Directory",     {"fg": s:yayaka_purple})       " todo
 call s:h("ErrorMsg",      {"fg": s:cocona_pink_deeper})       " todo
 call s:h("IncSearch",     {"bg": s:cocona_pink, "fg": s:clouds})       " todo
 call s:h("Search",        {"bg": s:bg_dark})       " todo
@@ -176,8 +176,8 @@ call s:h("VertSplit",     {"fg": s:bg_subtle})       " todo
 call s:h("Title",         {"fg": s:papika_blue_deeper})       " todo
 call s:h("Visual",        {"bg": s:visual})       " todo
 call s:h("WarningMsg",    {"fg": s:flipflap_yellow})       " todo
-call s:h("WildMenu",      {"fg": s:bg_subtle, "bg": s:cyan})       " todo
-call s:h("Folded",        {"bg": s:purple, "fg": s:bg_subtle})       " todo
+call s:h("WildMenu",      {"fg": s:bg_subtle, "bg": s:flipflap_cyan})       " todo
+call s:h("Folded",        {"bg": s:yayaka_purple, "fg": s:bg_subtle})       " todo
 call s:h("FoldColumn",    {"fg": s:flipflap_yellow})       " todo
 call s:h("DiffAdd",       {"fg": s:yayaka_green})       " todo
 call s:h("DiffDelete",    {"fg": s:cocona_pink})       " todo
@@ -208,7 +208,7 @@ call s:h("CursorLine",    {"bg": s:bg_subtle})       " todo
 call s:h("ColorColumn",   {"bg": s:bg_subtle})       " todo
 
 " remainder of syntax highlighting
-call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:purple, "gui": "bold", "cterm": "bold"})       " todo
+call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:yayaka_purple, "gui": "bold", "cterm": "bold"})       " todo
 call s:h("qfLineNr",      {"fg": s:medium_gray})       " todo
 
 " hi helpHyperTextJump guifg=#5FAFD7 ctermfg=74
@@ -325,8 +325,8 @@ let g:terminal_color_1 = s:cocona_pink.gui
 let g:terminal_color_2 = s:yayaka_green.gui
 let g:terminal_color_3 = s:flipflap_yellow.gui
 let g:terminal_color_4 = s:papika_blue.gui
-let g:terminal_color_5 = s:purple.gui
-let g:terminal_color_6 = s:cyan.gui
+let g:terminal_color_5 = s:yayaka_purple.gui
+let g:terminal_color_6 = s:flipflap_cyan.gui
 let g:terminal_color_7 = s:clouds.gui
 let g:terminal_color_8 = s:bg_subtle.gui
 let g:terminal_color_9 = s:cocona_pink_deeper.gui
@@ -334,5 +334,5 @@ let g:terminal_color_10 = s:yayaka_green_deeper.gui
 let g:terminal_color_11 = s:flipflap_gold.gui
 let g:terminal_color_12 = s:papika_blue_deeper.gui
 let g:terminal_color_13 = s:dark_purple.gui
-let g:terminal_color_14 = s:dark_cyan.gui
+let g:terminal_color_14 = s:pure_seafoam.gui
 let g:terminal_color_15 = s:dark_clouds.gui
