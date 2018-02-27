@@ -1,8 +1,10 @@
 " Colors
-let s:black           = { "gui": "#212121", "cterm": "0", "cterm16" : "0" }
+let s:abyssal_black   = { "gui": "#000000", "cterm": "0", "cterm16" : "0" }
+let s:soft_gray       = { "gui": "#2e2b2b", "cterm": "0", "cterm16" : "0" }
+let s:pure_light_gray = { "gui": "#cccccc", "cterm": "15", "cterm16" : "15" }
+let s:pure_white      = { "gui": "#FFFFFF", "cterm": "231", "cterm16" : "1" }
+
 let s:medium_gray     = { "gui": "#767676", "cterm": "243", "cterm16" : "243" }
-let s:white           = { "gui": "#F3F3F3", "cterm": "15", "cterm16" : "15" }
-let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231", "cterm16" : "231" }
 let s:light_black     = { "gui": "#424242", "cterm": "8", "cterm16" : "8" }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240", "cterm16" : "240" }
 
@@ -11,45 +13,43 @@ let s:subtle_black  = { "gui": "#303030", "cterm": "236", "cterm16" : "236" }
 let s:light_gray    = { "gui": "#B2B2B2", "cterm": "249", "cterm16" : "249" }
 let s:lighter_gray  = { "gui": "#C6C6C6", "cterm": "251", "cterm16" : "251" }
 
-" challenger deep colors:
 let s:asphalt = { "gui": "#1e1c31", "cterm": "233", "cterm16": "NONE"}
 let s:asphalt_subtle= { "gui": "#100E23", "cterm": "232", "cterm16": "8"}
 let s:dark_asphalt = { "gui": "#565575", "cterm": "236", "cterm16": "0"}
 
-let s:red = { "gui": "#ff8080", "cterm": "204", "cterm16": "1"}
-let s:dark_red = { "gui": "#ff5458", "cterm": "203", "cterm16": "9"}
+let s:cocona_pink = { "gui": "#fa9cb6", "cterm": "204", "cterm16": "1"}
+let s:cocona_pink_deeper = { "gui": "#3981f1", "cterm": "203", "cterm16": "9"}
 
-let s:green = { "gui": "#95ffa4", "cterm": "120", "cterm16": "2"}
-let s:dark_green = { "gui": "#62d196", "cterm": "119", "cterm16": "10"}
+let s:yayaka_green = { "gui": "#b0fb7c", "cterm": "120", "cterm16": "2"}
+let s:yayaka_green_deeper = { "gui": "#74bb4e", "cterm": "119", "cterm16": "10"}
 
 let s:yellow = { "gui": "#ffe9aa", "cterm": "228", "cterm16": "3"}
 let s:dark_yellow = { "gui": "#ffb378", "cterm": "215", "cterm16": "11"}
 
-let s:blue = { "gui": "#91ddff", "cterm": "159", "cterm16": "4"}
-let s:dark_blue = { "gui": "#65b2ff", "cterm": "75", "cterm16": "12"}
+let s:papika_blue = { "gui": "#98d3f9", "cterm": "159", "cterm16": "4"}
+let s:papika_blue_deeper = { "gui": "#3981f1", "cterm": "75", "cterm16": "12"}
 
-let s:purple = { "gui": "#c991e1", "cterm": "141", "cterm16": "5"}
-let s:dark_purple = { "gui": "#906cff", "cterm": "135", "cterm16": "13"}
+let s:yayaka_purple = { "gui": "#cb88ec", "cterm": "141", "cterm16": "5"}       " todo
+let s:dark_purple = { "gui": "#cfb0ff", "cterm": "135", "cterm16": "13"}       " todo
 
-let s:cyan = { "gui": "#aaffe4", "cterm": "122", "cterm16": "6"}
-let s:dark_cyan = { "gui": "#63f2f1", "cterm": "121", "cterm16": "14"}
+let s:flipflap_cyan = { "gui": "#6af2f1", "cterm": "122", "cterm16": "6"}       " todo
+let s:pure_seafoam = { "gui": "#7ce8a4", "cterm": "121", "cterm16": "14"}       " todo
 
 let s:clouds = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
 let s:dark_clouds = { "gui": "#a6b3cc", "cterm": "252", "cterm16": "15"}
 
-let s:bg              = s:asphalt
-let s:bg_subtle       = s:asphalt_subtle
-let s:bg_dark         = s:dark_asphalt
-let s:norm            = s:clouds
-let s:norm_subtle     = s:dark_clouds
-let s:visual          = s:bg_dark
+let s:bg              = s:soft_gray
+let s:bg_subtle       = s:medium_gray
+let s:bg_dark         = s:abyssal_black
+let s:norm            = s:pure_white
+let s:norm_subtle     = s:pure_light_gray
+let s:visual          = s:flipflap_cyan
 
-" lightline challenger deep colors:
+" lightline pureillusion colors:
 let s:lfc = {
-      \'black': [ s:black.gui, s:black.cterm16],
+      \'black': [ s:abyssal_black.gui, s:abyssal_black.cterm16],
       \'medium_gray': [ s:medium_gray.gui, s:medium_gray.cterm16],
-      \'white': [ s:white.gui, s:white.cterm16],
-      \'actual_white': [ s:actual_white.gui, s:actual_white.cterm16 ],
+      \'white': [ s:pure_white.gui, s:pure_white.cterm16],
       \'light_black': [s:light_black.gui, s:light_black.cterm16],
       \'lighter_black': [ s:lighter_black.gui, s:lighter_black.cterm16],
       \'subtle_black': [ s:subtle_black.gui, s:subtle_black.cterm16],
@@ -58,18 +58,18 @@ let s:lfc = {
       \'asphalt': [s:asphalt.gui, s:asphalt.cterm16],
       \'asphalt_subtle': [s:asphalt_subtle.gui, s:asphalt_subtle.cterm16],
       \'dark_asphalt' : [s:dark_asphalt.gui, s:dark_asphalt.cterm16],
-      \'red' : [s:red.gui, s:red.cterm16],
-      \'dark_red' : [s:dark_red.gui, s:dark_red.cterm16],
-      \'green' : [s:green.gui, s:green.cterm16],
-      \'dark_green' : [s:dark_green.gui, s:dark_green.cterm16],
+      \'red' : [s:cocona_pink.gui, s:cocona_pink.cterm16],
+      \'dark_red' : [s:cocona_pink_deeper.gui, s:cocona_pink_deeper.cterm16],
+      \'green' : [s:yayaka_green.gui, s:yayaka_green.cterm16],
+      \'dark_green' : [s:yayaka_green_deeper.gui, s:yayaka_green_deeper.cterm16],
       \'yellow' : [s:yellow.gui, s:yellow.cterm16],
       \'dark_yellow' : [s:dark_yellow.gui, s:dark_yellow.cterm16],
-      \'blue' : [s:blue.gui, s:blue.cterm16],
-      \'dark_blue' : [s:dark_blue.gui, s:dark_blue.cterm16],
-      \'purple' : [s:purple.gui, s:purple.cterm16],
+      \'blue' : [s:papika_blue.gui, s:papika_blue.cterm16],
+      \'dark_blue' : [s:papika_blue_deeper.gui, s:papika_blue_deeper.cterm16],
+      \'purple' : [s:yayaka_purple.gui, s:yayaka_purple.cterm16],
       \'dark_purple' : [s:dark_purple.gui, s:dark_purple.cterm16],
-      \'cyan' : [s:cyan.gui, s:cyan.cterm16],
-      \'dark_cyan' : [s:dark_cyan.gui, s:dark_cyan.cterm16],
+      \'cyan' : [s:flipflap_cyan.gui, s:flipflap_cyan.cterm16],
+      \'dark_cyan' : [s:dark_seafoam.gui, s:dark_seafoam.cterm16],
       \'clouds' : [s:clouds.gui, s:clouds.cterm16],
       \'dark_clouds' : [s:dark_clouds.gui, s:dark_clouds.cterm16],
       \'bg': [s:bg.gui, s:bg.cterm16],
@@ -111,4 +111,4 @@ let s:p.inactive.left   = [ [ s:lfc.dark_asphalt, s:lfc.bg_subtle ], [ s:lfc.dar
 let s:p.inactive.middle = [ [ s:lfc.dark_asphalt, s:lfc.bg_subtle ] ]
 let s:p.inactive.right  = [ [ s:lfc.dark_asphalt, s:lfc.bg_subtle ], [ s:lfc.dark_asphalt, s:lfc.bg_subtle ] ]
 
-let g:lightline#colorscheme#pure_illusion#palette = lightline#colorscheme#flatten(s:p)
+let g:lightline#colorscheme#pureillusion#palette = lightline#colorscheme#flatten(s:p)

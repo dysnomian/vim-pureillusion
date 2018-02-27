@@ -11,16 +11,16 @@ if exists('syntax on')
     syntax reset
 endif
 
-let g:colors_name='pure_illusion'
+let g:colors_name='pureillusion'
 set background=dark
 
-if ! exists("g:pure_illusion_termcolors")
-  let g:pure_illusion_termcolors = 256
+if ! exists("g:pureillusion_termcolors")
+  let g:pureillusion_termcolors = 256
 endif
 
 " not all terminals support italics properly.  If yours does, opt-in.
-if ! exists("g:pure_illusion_terminal_italics")
-  let g:pure_illusion_terminal_italics = 1
+if ! exists("g:pureillusion_terminal_italics")
+  let g:pureillusion_terminal_italics = 1
 endif
 
 " Colors
@@ -45,7 +45,7 @@ let s:dark_asphalt = { "gui": "#565575", "cterm": "236", "cterm16": "0"}       "
 let s:cocona_pink = { "gui": "#fa9cb6", "cterm": "204", "cterm16": "1"}
 let s:cocona_pink_deeper = { "gui": "#3981f1", "cterm": "203", "cterm16": "9"}
 
-let s:yayaka_green = { "gui": "#a6e22e", "cterm": "120", "cterm16": "2"}
+let s:yayaka_green = { "gui": "#b0fb7c", "cterm": "120", "cterm16": "2"}
 let s:yayaka_green_deeper = { "gui": "#74bb4e", "cterm": "119", "cterm16": "10"}
 
 let s:flipflap_yellow = { "gui": "#fcfdaf", "cterm": "228", "cterm16": "3"}       " todo
@@ -78,11 +78,11 @@ let s:head_c         = s:pure_seafoam
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
   " Not all terminals support italics properly. If yours does, opt-in.
-  if g:pure_illusion_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
+  if g:pureillusion_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
     unlet a:style.cterm
   endif
 
-  if g:pure_illusion_termcolors == 16
+  if g:pureillusion_termcolors == 16
     let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm16 : "0")
     let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm16 : "1")
   else
@@ -166,8 +166,8 @@ call s:h("IncSearch",     {"bg": s:cocona_pink, "fg": s:clouds})       " todo
 call s:h("Search",        {"bg": s:bg_dark})       " todo
 call s:h("MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})       " todo
 hi! link ModeMsg MoreMsg
-call s:h("LineNr",        {"fg": s:abyssal_black, "bg": s:bg_subtle})       " todo
-call s:h("CursorLineNr",  {"bg": s:papika_blue, "fg": s:bg_subtle})       " todo
+call s:h("LineNr",        {"fg": s:pure_white,  "bg": s:medium_gray})       " todo
+call s:h("CursorLineNr",  {"fg": s:medium_gray, "bg": s:flipflap_cyan})       " todo
 call s:h("Question",      {"fg": s:cocona_pink})       " todo
 call s:h("StatusLine",    {"bg": s:bg_dark})       " todo
 call s:h("Conceal",       {"fg": s:norm})       " todo
@@ -179,11 +179,11 @@ call s:h("WarningMsg",    {"fg": s:flipflap_yellow})       " todo
 call s:h("WildMenu",      {"fg": s:bg_subtle, "bg": s:flipflap_cyan})       " todo
 call s:h("Folded",        {"bg": s:yayaka_purple, "fg": s:bg_subtle})       " todo
 call s:h("FoldColumn",    {"fg": s:flipflap_yellow})       " todo
-call s:h("DiffAdd",       {"fg": s:yayaka_green})       " todo
-call s:h("DiffDelete",    {"fg": s:cocona_pink})       " todo
-call s:h("DiffChange",    {"fg": s:flipflap_gold})       " todo
-call s:h("DiffText",      {"fg": s:papika_blue_deeper})       " todo
-call s:h("SignColumn",    {"fg": s:pure_white})       " todo
+call s:h("DiffAdd",       {"fg": s:soft_gray,  "bg": s:yayaka_green})       " todo
+call s:h("DiffDelete",    {"fg": s:soft_gray,  "bg": s:cocona_pink})       " todo
+call s:h("DiffChange",    {"fg": s:soft_gray,  "bg": s:flipflap_gold})       " todo
+call s:h("DiffText",      {"fg": s:soft_gray,  "bg": s:papika_blue_deeper})       " todo
+call s:h("SignColumn",    {"fg": s:light_gray, "bg": s:soft_gray})       " todo
 
 if has("gui_running")
   call s:h("SpellBad",    {"gui": "underline", "sp": s:cocona_pink_deeper})       " todo
@@ -317,7 +317,6 @@ call s:h("GitGutterAdd",{"fg": s:yayaka_green})
 call s:h("GitGutterDelete",{"fg": s:cocona_pink})
 call s:h("GitGutterChange",{"fg": s:flipflap_yellow})
 call s:h("GitGutterChangeDelete",{"fg": s:cocona_pink})
-
 
 "nvim terminal colors
 let g:terminal_color_0 = s:bg_dark.gui
