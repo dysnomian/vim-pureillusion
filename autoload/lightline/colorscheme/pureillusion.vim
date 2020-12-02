@@ -1,3 +1,10 @@
+" =============================================================================
+" Filename: autoload/lightline/colorscheme/pureillusion.vim
+" Author: dysnomian
+" License: MIT License
+" Last Change: 2020/04/06 19:22:53.
+" =============================================================================
+
 " Colors
 let s:abyssal_black   = { "gui": "#000000", "cterm": "0", "cterm16" : "0" }
 let s:soft_gray       = { "gui": "#2e2b2b", "cterm": "0", "cterm16" : "0" }
