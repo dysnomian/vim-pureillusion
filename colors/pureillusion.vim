@@ -105,7 +105,7 @@ endfunction
 
 call s:h('Normal',        {'bg': s:bg, 'fg': s:norm})
 call s:h('Cursor',        {'bg': s:bg_dark, 'fg': s:norm })
-call s:h('Comment',       {'fg': s:dark_gray, 'gui': 'italic', 'cterm': 'italic'})
+call s:h('Comment',       {'fg': s:light_gray, 'gui': 'italic', 'cterm': 'italic'})
 
 call s:h('Constant',      {'fg': s:flipflap_yellow})
 hi! link String           Constant
@@ -132,7 +132,7 @@ hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
 
-call s:h('Keyword',       {'fg': s:cocona_pink})       " todo
+call s:h('Keyword',       {'fg': s:cocona_pink, 'gui': 'bold', 'cterm': 'bold', 'term': 'bold'})
 hi! link Statement        Keyword
 
 call s:h('Type',          {'fg': s:papika_blue})       " todo
@@ -150,7 +150,7 @@ hi! link Debug            Special
 call s:h('Underlined',    {'fg': s:norm                      , 'gui': 'underline', 'cterm': 'underline'})       " todo
 call s:h('Ignore',        {'fg': s:bg                                                                  })       " todo
 call s:h('Error',         {'fg': s:pure_white, 'bg': s:cocona_pink_deeper , 'gui': 'bold'     , 'cterm': 'bold'     })       " todo
-call s:h('Todo',          {'fg': s:pure_white, 'bg': s:papika_blue, 'gui': 'bold'     , 'cterm': 'bold'     })       " todo
+call s:h('Todo',          {'fg': s:pure_white, 'bg': s:papika_blue_deeper, 'gui': 'bold'     , 'cterm': 'bold'     })
 
 " ui chrome ====================================================================
 " ordered according to `:help hitest.vim`
@@ -163,16 +163,16 @@ call s:h('NonText',       {'fg': s:bg_dark})       " todo
 call s:h('Directory',     {'fg': s:yayaka_purple})       " todo
 call s:h('ErrorMsg',      {'fg': s:cocona_pink_deeper})       " todo
 call s:h('IncSearch',     {'bg': s:cocona_pink, 'fg': s:clouds})       " todo
-call s:h('Search',        {'bg': s:bg_dark})       " todo
+call s:h('Search',        {'fg': s:pure_white, 'bg': s:flipflap_gold})
 call s:h('MoreMsg',       {'fg': s:medium_gray, 'gui': 'bold', 'cterm': 'bold'})       " todo
 hi! link ModeMsg MoreMsg
-call s:h('LineNr',        {'fg': s:pure_white,  'bg': s:medium_gray})       " todo
+call s:h('LineNr',        {'fg': s:light_gray,  'bg': s:medium_gray})
 call s:h('CursorLineNr',  {'fg': s:medium_gray, 'bg': s:flipflap_cyan})       " todo
 call s:h('Question',      {'fg': s:cocona_pink})       " todo
 call s:h('StatusLine',    {'bg': s:bg_dark})       " todo
 call s:h('Conceal',       {'fg': s:norm})       " todo
 call s:h('StatusLineNC',  {'bg': s:bg_dark, 'fg': s:medium_gray})       " todo
-call s:h('VertSplit',     {'fg': s:bg_subtle})       " todo
+call s:h('VertSplit',     {'fg': s:soft_gray, 'bg': s:lighter_black})
 call s:h('Title',         {'fg': s:papika_blue_deeper})       " todo
 call s:h('Visual',        {'bg': s:visual})       " todo
 call s:h('WarningMsg',    {'fg': s:flipflap_yellow})       " todo
@@ -183,7 +183,7 @@ call s:h('DiffAdd',       {'fg': s:soft_gray,  'bg': s:yayaka_green})       " to
 call s:h('DiffDelete',    {'fg': s:soft_gray,  'bg': s:cocona_pink})       " todo
 call s:h('DiffChange',    {'fg': s:soft_gray,  'bg': s:flipflap_gold})       " todo
 call s:h('DiffText',      {'fg': s:soft_gray,  'bg': s:papika_blue_deeper})       " todo
-call s:h('SignColumn',    {'fg': s:light_gray, 'bg': s:soft_gray})       " todo
+call s:h('SignColumn',    {'fg': s:light_gray, 'bg': s:soft_gray})
 
 if has('gui_running')
   call s:h('SpellBad',    {'gui': 'underline', 'sp': s:cocona_pink_deeper})       " todo
@@ -201,14 +201,14 @@ call s:h('PmenuSel',      {'fg': s:norm, 'bg': s:bg_subtle})       " todo
 call s:h('PmenuSbar',     {'fg': s:norm, 'bg': s:bg_subtle})       " todo
 call s:h('PmenuThumb',    {'fg': s:norm, 'bg': s:bg_subtle})       " todo
 call s:h('TabLine',       {'fg': s:papika_blue,   'bg': s:pure_white})       " todo
-call s:h('TabLineSel',    {'fg': s:pure_white, 'bg': s:abyssal_black, 'gui': 'bold', 'cterm': 'bold"})       " todo
+call s:h('TabLineSel',    {'fg': s:pure_white, 'bg': s:abyssal_black, 'gui': 'bold', 'cterm': 'bold'})       " todo
 call s:h('TabLineFill',   {'fg': s:soft_gray, 'bg': s:pure_white})       " todo
-call s:h('CursorColumn',  {'bg': s:bg_subtle})       " todo
-call s:h('CursorLine',    {'bg': s:bg_subtle})       " todo
-call s:h('ColorColumn',   {'bg': s:bg_subtle})       " todo
+call s:h('CursorColumn',  {'bg': s:abyssal_black})
+call s:h('CursorLine',    {'bg': s:abyssal_black})
+call s:h('ColorColumn',   {'bg': s:abyssal_black})
 
 " remainder of syntax highlighting
-call s:h('MatchParen',    {'bg': s:bg_subtle, 'fg': s:yayaka_purple, 'gui': 'bold', 'cterm': 'bold"})       " todo
+call s:h('MatchParen',    {'fg': s:yayaka_purple, 'gui': 'bold', 'cterm': 'bold'})       " todo
 call s:h('qfLineNr',      {'fg': s:medium_gray})       " todo
 
 " hi helpHyperTextJump guifg=#5FAFD7 ctermfg=74
@@ -271,7 +271,7 @@ call s:h('mkdLineContinue',             {'fg': s:norm})
 call s:h('mkdLink',                     {'fg': s:norm})
 call s:h('mkdLinkDef',                  {'fg': s:medium_gray})
 call s:h('mkdListItem',                 {'fg': s:norm})
-call s:h('mkdNonListItemBlock',         {'fg': s:norm})  ' bug in syntax?
+call s:h('mkdNonListItemBlock',         {'fg': s:norm})  " bug in syntax?
 call s:h('mkdRule',                     {'fg': s:norm})
 call s:h('mkdUrl',                      {'fg': s:medium_gray, 'gui': 'underline', 'cterm': 'underline'})
 call s:h('mkdCode',                     {'fg': s:norm})
@@ -337,5 +337,5 @@ let g:terminal_color_14 = s:pure_seafoam.gui
 let g:terminal_color_15 = s:dark_clouds.gui
 
 " ALE sign colors
-hi ALEError ctermfg = s:cocona_pink_deeper.gui
-hi ALEWarning ctermbg = s:flipflap_gold.gui
+" hi ALEError ctermfg = s:cocona_pink_deeper.gui
+" hi ALEWarning ctermbg = s:flipflap_gold.gui
