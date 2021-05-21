@@ -43,7 +43,7 @@ let s:asphalt_subtle= { 'gui': '#100E23', 'cterm': '232', 'cterm16': '8'}       
 let s:dark_asphalt = { 'gui': '#565575', 'cterm': '236', 'cterm16': '0'}       " todo
 
 let s:cocona_pink = { 'gui': '#fa9cb6', 'cterm': '204', 'cterm16': '1'}
-let s:cocona_pink_deeper = { 'gui': '#3981f1', 'cterm': '203', 'cterm16': '9'}
+let s:cocona_pink_deeper = { 'gui': '#f77378', 'cterm': '203', 'cterm16': '9'}
 
 let s:yayaka_green = { 'gui': '#b0fb7c', 'cterm': '120', 'cterm16': '2'}
 let s:yayaka_green_deeper = { 'gui': '#74bb4e', 'cterm': '119', 'cterm16': '10'}
@@ -317,6 +317,9 @@ call s:h('GitGutterAdd',{'fg': s:yayaka_green})
 call s:h('GitGutterDelete',{'fg': s:cocona_pink})
 call s:h('GitGutterChange',{'fg': s:flipflap_yellow})
 call s:h('GitGutterChangeDelete',{'fg': s:cocona_pink})
+call s:h('DiffAdd',{'fg': s:yayaka_green})
+call s:h('DiffDelete',{'fg': s:cocona_pink})
+call s:h('DiffChange',{'fg': s:flipflap_yellow})
 
 "nvim terminal colors
 let g:terminal_color_0 = s:bg_dark.gui
